@@ -1,0 +1,29 @@
+name: Elixir CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: elixir:1.9.1-slim
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: |
+        mix local.rebar --force
+        mix local.hex --force
+        mix deps.get
+    - name: Build website
+      run: mix serum.build
+    - name: Publish site
+      uses: maxheld83/ghpages@v0.2.1
+      env:
+        GH_PAT: ${{ secrets.SECRET_DEPLOY_KEY }}
+        BUILD_DIR: ./site
