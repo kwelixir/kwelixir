@@ -1,0 +1,11 @@
+<section class="hero text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>
+          Group dedicated to learning and sharing about <a href="http://elixir-lang.org" class="elixir">Elixir</a>
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>

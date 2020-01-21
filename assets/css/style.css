@@ -1,0 +1,43 @@
+:root {
+  --nav-bg: #3e1f52;
+  --hero-bg: #47215e;
+
+  --border-color: #23112e;
+
+  --page-color: #424242;
+  --page-bg-color: #ffffff;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  background: var(--page-bg-color);
+  color: var(--page-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alatsi', sans-serif;
+}
+
+
+/* -------- navbar -------- */
+
+.navbar-elixir {
+  background-color: var(--nav-bg);
+  font-family: 'Alatsi', sans-serif;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* -------- hero -------- */
+
+.hero {
+  background: var(--hero-bg);
+  padding: 60px 0 60px 0;
+  color: #ffffff;
+}
+
+.hero .elixir {
+  text-shadow: 4px 4px 0px var(--border-color);
+  color: #ffffff;
+  text-decoration: none;
+}
