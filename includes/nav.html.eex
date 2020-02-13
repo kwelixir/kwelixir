@@ -12,9 +12,9 @@
           <a class="nav-link px-3" href="<%= base() %>">Home <span class="sr-only">(current)</span></a>
         </li>
 
-        <li class="nav-item <%= if (@page.url == "/posts/index.html"), do: "active" %>">
+        <!--<li class="nav-item <%= if (@page.url == "/posts/index.html"), do: "active" %>">
           <a class="nav-link" href="<%= base "posts" %>">Talks</a>
-        </li>
+        </li>-->
 
         <li class="nav-item <%= if (@page.url == page("code_of_conduct")), do: "active" %>">
           <a class="nav-link px-3" href="<%= page "code_of_conduct" %>">Code of Conduct</a>
