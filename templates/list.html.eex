@@ -1,4 +1,5 @@
-<h2><%= @page.title %></h2>
+<!--<h2><%= @page.title %></h2>-->
+<h2>Talks</h2>
 <ul>
   <%= for x <- @all_posts do %>
     <li>
