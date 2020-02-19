@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Code of Conduct - Kwelixir</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Alatsi|Source+Sans+Pro&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-dark navbar-elixir" role="navigation">
+  <div class="container">
+    <a class="navbar-brand" href="/">KW Elixir</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#kwelixirmenu" aria-controls="kwelixirmenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="kwelixirmenu">
+      <ul class="navbar-nav ml-auto mt">
+        <li class="nav-item ">
+          <a class="nav-link px-3" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <!--<li class="nav-item ">
+          <a class="nav-link" href="/posts">Talks</a>
+        </li>-->
+
+        <li class="nav-item active">
+          <a class="nav-link px-3" href="/code_of_conduct.html">Code of Conduct</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    
+<section class="hero text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>
+          Group dedicated to learning and sharing about <a href="http://elixir-lang.org" class="elixir">Elixir</a>
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <div class="container py-5">
+      <p>KWElixir is dedicated to providing a harassment-free meetup experience for everyone. We do not tolerate harassment of meetup participants in any form. Sexual language and imagery is not appropriate for any meetup venue, including talks. Meetup participants violating these rules may be sanctioned or expelled from the meetup at the discretion of the meetup organizers.</p><p>Harassment includes offensive verbal comments related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p><p><strong>Participants asked to stop any harassing behavior are expected to comply immediately.</strong></p><p>If a participant engages in harassing behavior, the meetup organizers may take any action they deem appropriate, including warning the offender or expulsion from the meetup. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of meetup staff immediately.</p><p>Meetup staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the meetup. We value your attendance.</p><p>You can contact the organizer in person at meetups or privately via the email <code class="inline">lucas dot ruby dot dev at gmail dot com</code>.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+const ws_url = "ws://" + location.host + "/serum_live_reloader";
+var ws;
+
+connect();
+
+function connect() {
+  ws = new WebSocket(ws_url);
+  ws.onmessage = onMessage;
+  ws.onclose = onClose;
+}
+
+function onMessage(e) {
+  if (e.data === "reload") {
+    location.reload();
+  }
+}
+
+function onClose(e) {
+  console.warn("WebSocket disconnected from server. Reconnecting in 10 seconds.");
+  setTimeout(connect, 10000)
+}
+</script>

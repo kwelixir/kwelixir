@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Elixir 101 - Kwelixir</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Alatsi|Source+Sans+Pro&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-dark navbar-elixir" role="navigation">
+  <div class="container">
+    <a class="navbar-brand" href="/">KW Elixir</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#kwelixirmenu" aria-controls="kwelixirmenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="kwelixirmenu">
+      <ul class="navbar-nav ml-auto mt">
+        <li class="nav-item ">
+          <a class="nav-link px-3" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <!--<li class="nav-item ">
+          <a class="nav-link" href="/posts">Talks</a>
+        </li>-->
+
+        <li class="nav-item ">
+          <a class="nav-link px-3" href="/code_of_conduct.html">Code of Conduct</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    
+<section class="hero text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>
+          Group dedicated to learning and sharing about <a href="http://elixir-lang.org" class="elixir">Elixir</a>
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <div class="container py-5">
+      <h1 id="elixir-101">Elixir 101</h1><p>Tuesday, 11 Feb 2020</p><p>Introduction to Elixir for the first meetup after the reboot of the group.</p><h3 id="slides">Slides</h3><p><script async="async" class="speakerdeck-embed" data-id="b2ea76eb2673434e97e4399ee054bc82" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script></p><h3 id="vídeo">Vídeo</h3><p><iframe width="100%" height="600" src="https://www.youtube.com/embed/m4Fv5-m7IdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></p><h3 id="links">Links</h3><ul><li><a href="https://elixirschool.com/en/">Elixir School</a></li><li><a href="https://github.com/bignerdranch/why_elixir">Why Elxiir</a></li><li><a href="https://blog.lelonek.me/elixir-on-erlang-vm-demystified-320557d09e1f">Blog post: Elixir on Erlang VM demystified</a></li><li><a href="https://www.youtube.com/watch?v=N5vJ1Y2j0uI">talk about Actor Model in Elixir by Michał Muskała</a></li><li><a href="https://github.com/WhiteRookPL/learn-elixir-the-hard-way/blob/master/docs/concurrency-and-actor-model.md">Learn Elixir The Hard Way: Concurrency and actor model</a></li><li><a href="https://elixir-companies.com/">Elixir Companies</a></li><li><a href="https://israilsdead.com/">Is Rails dead?</a></li><li><a href="https://www.amberbit.com/blog/2015/6/14/closures-elixir-vs-ruby-vs-javascript/">Closures: Elixir vs Ruby vs JavaScript</a></li><li><a href="https://stackoverflow.com/questions/29967086/are-elixir-variables-really-immutable">Question on Stackoverflow: Are Elixir variables really immutable?</a></li><li><a href="http://plataformatec.com.br/elixir-radar/?utm_source=kwelixir_ca_website">Elixir Radar Newsletter</a></li></ul><p>Thank you!</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+const ws_url = "ws://" + location.host + "/serum_live_reloader";
+var ws;
+
+connect();
+
+function connect() {
+  ws = new WebSocket(ws_url);
+  ws.onmessage = onMessage;
+  ws.onclose = onClose;
+}
+
+function onMessage(e) {
+  if (e.data === "reload") {
+    location.reload();
+  }
+}
+
+function onClose(e) {
+  console.warn("WebSocket disconnected from server. Reconnecting in 10 seconds.");
+  setTimeout(connect, 10000)
+}
+</script>
